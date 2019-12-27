@@ -1,0 +1,6 @@
+for _ in range(int(input()):
+    arr = list(map(int,input().split()))
+    mn,mx = min(arr),max(arr)
+    if mx-mn <= 2:
+        print(0)
+    else: print(2*mx+2*mn-4)    
