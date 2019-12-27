@@ -1,0 +1,47 @@
+# for i in range(int(input())):
+# 	n = int(input())
+# 	arr = list(map(int,input().split()))
+# 	count=0
+# 	for i in range(n):
+# 		flag = 1
+# 		Max = max(arr)
+# 		for j in range(n):
+# 			if arr[j]%2==0 and arr[j]==Max:
+# 				arr[j] = arr[j]/2		
+# 		count+=1		
+# 		for j in arr:
+# 			if j%2 == 0:
+# 				flag = 0
+# 				break
+# 		if flag == 1:
+# 			break	
+# 	print("ans",count)
+
+t = int(input())
+for _ in range(t):
+    n = int(input())
+    a = set()
+    arr = [int(x)  for x in input().split()]
+    for x in arr:
+        while(x%2==0):
+            a.add(x)
+            x/=2
+    print (len(a))
+
+
+import heapq, itertools
+t = int(input().strip())
+while t:
+	t -= 1
+	input()
+	a = set(map(int, input().split(' ')))
+	h = []
+	done = set()
+	ans = 0
+	for x in a:
+		while x not in done and x%2 == 0:
+			done.add(x)
+			x //= 2
+			ans += 1
+	print(ans)
+
