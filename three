@@ -1,0 +1,24 @@
+q=int(input())
+for i in range(q):
+    s=input()
+    u=s.count('U')
+    d=s.count('D')
+    l=s.count('L')
+    r=s.count('R')
+    if u>d:
+        u=d
+    else:
+        d=u
+    if r>l:
+        r=l
+    else:
+        l=r
+    
+    if u==0 and r>1:
+        r=l=1
+    if r==0 and u>1:
+        u=d=1
+ 
+    new_str='U'*u + 'R'*r + 'D'*d + 'L'*l
+    print(len(new_str))
+    print(new_str)
